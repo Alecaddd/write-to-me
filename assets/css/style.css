@@ -1,0 +1,358 @@
+/* Write to Me css style */
+
+/*
+	---------------------------------------------------
+	FORM ELEMENTS
+	---------------------------------------------------
+*/
+
+label {
+	display: block;
+	text-align: center;
+	margin: 5px 0;
+	font-weight: 300;
+}
+
+input, 
+textarea {
+	font-size: 20px;
+	padding: 10px 12px;
+	border-radius: 2px;
+	border: 1px solid #ccc;
+	color: #ae2525;
+	outline: none;
+	max-width: 300px;
+	width: 100%;
+}
+
+textarea {
+	resize: none;
+}
+
+input:focus, 
+textarea:focus {
+	border-color: #B15252;
+}
+
+input.first-input {
+	text-align: center;
+}
+
+.mail-body label {
+	text-align: left;
+	width: 100%;
+	max-width: 322px;
+	margin: 5px auto;
+}
+
+.required label:after {
+	content: '*';
+	color: #C70000;
+	font-size: 15px;
+	font-weight: 600;
+	padding-left: 4px;
+}
+
+.name-input label:before, 
+.email-input label:before, 
+.msg-input label:before {
+	content: '';
+	font-size: 21px;
+	color: #D1D1D1;
+	padding-right: 8px;
+	font-family: FontAwesome;
+	font-style: normal;
+	font-weight: normal;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+.name-input label:before {
+	content: "\f183";
+}
+.email-input label:before {
+	content: "\f0e0";
+}
+.msg-input label:before {
+	content: "\f040";
+}
+
+.btn {
+	font-size: 20px;
+	font-weight: 400;
+	color: #fff;
+	padding: 10px 12px;
+	border: none;
+	border-radius: 2px;
+	background-color: #B15252;
+}
+
+.btn:hover, .btn:focus {
+	background-color: #ae2525;
+}
+
+.btn, input, a {
+	-webkit-transition: all .2s ease-in-out;
+	-moz-transition: all .2s ease-in-out;
+	-o-transition: all .2s ease-in-out;
+	transition: all .2s ease-in-out;
+}
+
+.btn-init {
+	width: 100%;
+	max-width: 200px;
+}
+
+.sending {
+	border-radius: 50%;
+	max-width: 43px;
+}
+
+.send {
+	width: 100%;
+	max-width: 100%;
+}
+
+/*
+	---------------------------------------------------
+	RESPONSE ELEMENTS
+	---------------------------------------------------
+*/
+
+.error > input {
+	border-color: #B15252;
+}
+
+.error:after {
+	content: 'Invalid value';
+	display: inline-block;
+	padding: 3px 7px;
+	color: #fff;
+	background: #F35959;
+	border-radius: 2px;
+	position: relative;
+	float: right;
+	margin-top: 9px;
+	margin-left: -100px;
+	-webkit-animation: fadein .6s ease-in-out;
+	animation: fadein .6s ease-in-out;
+}
+
+/*
+	---------------------------------------------------
+	FORM CONTAINER
+	---------------------------------------------------
+*/
+
+.container {
+	width: 100%;
+	max-width: 570px;
+	margin: 40px auto;
+	position: relative;
+}
+
+.input-container {
+	text-align: center;
+}
+
+p.description {
+	font-weight: 300;
+	font-size: 17px;
+	text-align: center;
+	line-height: 1.3em;
+	margin: 40px 0;
+	color: #727272;
+}
+
+/*
+	---------------------------------------------------
+	MAIL FORM CONTAINER
+	---------------------------------------------------
+*/
+
+.mail-container {
+	-webkit-perspective: 1000;
+    -moz-perspective: 1000;
+    -o-perspective: 1000;
+    perspective: 1000;
+	display: none;
+	 -moz-transform: perspective(1000px);
+    -moz-transform-style: preserve-3d; 
+}
+
+.mail-container.hover .mail-content {
+	transform: rotateY(180deg);
+}
+
+.mail-container, .mail-front, .mail-back {
+	width: 100%;
+}
+
+.mail-content {
+	transition: 0.6s;/* change the flip speed */
+	transform-style: preserve-3d;
+	position: relative;
+	margin-bottom: 30px;
+	-moz-transform: perspective(1000px);
+    -moz-transform-style: preserve-3d;
+}
+
+.mail-front, .mail-back {
+	-webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -o-backface-visibility: hidden;
+    backface-visibility: hidden;
+
+    -webkit-transition: 0.6s;
+    -webkit-transform-style: preserve-3d;
+
+    -moz-transition: 0.6s;
+    -moz-transform-style: preserve-3d;
+
+    -o-transition: 0.6s;
+    -o-transform-style: preserve-3d;
+
+    -ms-transition: 0.6s;
+    -ms-transform-style: preserve-3d;
+
+    transition: 0.6s;
+    transform-style: preserve-3d;
+    
+	background: #fff;
+	border-radius: 2px;
+	box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.mail-front {
+	z-index: 2;
+	-webkit-transform: rotateY(0deg);
+}
+
+.mail-back {
+	transform: rotateY(180deg);
+	text-align: center;
+}
+
+/*
+	---------------------------------------------------
+	MAIL CONTENT
+	---------------------------------------------------
+*/
+
+.mail-back .fa {
+	margin: 25px 0;
+	color: #CA5353;
+}
+
+p.thanks-title {
+	font-size: 35px;
+	font-weight: 200;
+	color: #B15252;
+	margin: 0;
+	text-shadow: 0 1px 1px #fff;
+}
+
+p.thanks-msg {
+	margin: 0 0 40px;
+}
+
+.reload {
+	display: inline-block;
+	font-size: 15px;
+	font-weight: 300;
+	padding: 4px 5px;
+	border-radius: 2px;
+}
+
+.reload:hover {
+	color: #fff;
+	background: #B15252;
+}
+
+.mail-body {
+	padding: 20px;
+	margin-bottom: 5px;
+}
+
+.mail-body .input-container {
+	margin-bottom: 20px;
+}
+
+/*
+	---------------------------------------------------
+	LOADING PANEL
+	---------------------------------------------------
+*/
+
+.loading {
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	font-size: 10px;
+	position: absolute;
+	background: rgba(0, 0, 0, 0.65);
+	display: none;
+	z-index: 9999;
+	color: #fff;
+}
+
+.loading > p {
+	font-size: 30px; font-weight: 200;
+}
+
+.loading > div {
+	background-color: #fff;
+	height: 30px;
+	width: 3px;
+	margin-top: 215px;
+	display: inline-block; 
+}
+
+/*
+	---------------------------------------------------
+	ANIMATIONS
+	---------------------------------------------------
+*/
+
+@-webkit-keyframes fadein {
+	0% { opacity: 0; }
+	100% { opacity: 1; }
+}
+
+.loading > div {
+	-webkit-animation: stretchdelay 1.2s infinite ease-in-out;
+	animation: stretchdelay 1.2s infinite ease-in-out;
+}
+
+.loading .rect2 {
+	-webkit-animation-delay: -1.1s;
+	animation-delay: -1.1s;
+}
+
+.loading .rect3 {
+	-webkit-animation-delay: -1.0s;
+	animation-delay: -1.0s;
+}
+
+.loading .rect4 {
+	-webkit-animation-delay: -0.9s;
+	animation-delay: -0.9s;
+}
+
+.loading .rect5 {
+	-webkit-animation-delay: -0.8s;
+	animation-delay: -0.8s;
+}
+
+@-webkit-keyframes stretchdelay {
+	0%, 40%, 100% { -webkit-transform: scaleY(0.4) }  
+	20% { -webkit-transform: scaleY(1.0) }
+}
+
+@keyframes stretchdelay {
+	0%, 40%, 100% { transform: scaleY(0.4); -webkit-transform: scaleY(0.4); }
+	20% { transform: scaleY(1.0); -webkit-transform: scaleY(1.0); }
+}
