@@ -10,7 +10,7 @@ Simple contact form in PHP &amp; jQuery
 
 ### Dependencies
 
-**write-to-me** uses [jQuery 1.11.1](//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js "jQuery") and a bunch of icons from [Font-Awesome v4.1](//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css "jQuery")
+**write-to-me** uses [jQuery 1.11.1](//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js "jQuery") and a bunch of icons from [Font-Awesome v4.1](//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css "Font Awesome")
 
 #### Help
 
